@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:background="#000000">
+
+    <Button
+        android:id="@+id/btn_guest"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="Guest"
+        android:textColor="#00B6BD">
+
+    </Button>
+
+    <Button
+        android:id="@+id/btn_host"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="Host"
+        android:layout_marginTop="10dp"
+        android:textColor="#00B6BD">
+
+    </Button>
+
+</LinearLayout>

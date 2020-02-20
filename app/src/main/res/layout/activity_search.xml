@@ -26,7 +26,7 @@
             android:paddingRight="20dp"
             android:maxLines="1"
             android:layout_marginTop="100dp"
-            android:hint="Search by singers, song names, albums"
+            android:hint="Search by singers, song, albums"
             android:textColorHint="#00b6bd"
             android:singleLine="true">
         </EditText>

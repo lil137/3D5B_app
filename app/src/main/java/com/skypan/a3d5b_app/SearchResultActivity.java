@@ -26,6 +26,7 @@ public class SearchResultActivity extends AppCompatActivity {
 
 
         tv_singer = findViewById(R.id.tv_1);
+
         Intent intent = getIntent();
         String keyword = intent.getStringExtra("keyword");
 
@@ -34,19 +35,22 @@ public class SearchResultActivity extends AppCompatActivity {
 
     }
 
-    private void displayData(String keyword) {
-        mReference = FirebaseDatabase.getInstance().getReference("singers");
-        //DatabaseReference singer = mReference.child("singers");
+    private void displayData(final String keyword) {
+        mReference = FirebaseDatabase.getInstance().getReference();
+        DatabaseReference singer = mReference.child("singers");
 
-        mReference.orderByKey().equalTo(keyword).addValueEventListener(new ValueEventListener() {
+        singer.orderByValue().equalTo("Drake").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String post = dataSnapshot.getValue(String.class);
-                if( post == null){
+                //String data_key = dataSnapshot.getKey();
+                String data_val = dataSnapshot.getValue(String.class);
+                if( data_val == null){
                     Toast.makeText(SearchResultActivity.this, "No results found", Toast.LENGTH_SHORT).show();
                 }
+                    tv_singer.setText("singer：" + data_val);
 
-                tv_singer.setText("singer：" + post);
+
+
             }
 
             @Override

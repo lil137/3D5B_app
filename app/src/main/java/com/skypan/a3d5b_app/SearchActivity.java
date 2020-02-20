@@ -28,6 +28,8 @@ public class SearchActivity extends AppCompatActivity {
         mBtnSearch = findViewById(R.id.btn_search);
         mETsearch = findViewById(R.id.et_search);
 
+        mETsearch.setText("");
+
 
         mPopularUnderline.getPaint().setFlags(Paint. UNDERLINE_TEXT_FLAG );
         mPopularUnderline.getPaint().setAntiAlias(true);

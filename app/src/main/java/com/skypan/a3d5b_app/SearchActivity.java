@@ -39,7 +39,7 @@ public class SearchActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String inputText=mETsearch.getText().toString();
-                //Toast.makeText(SearchActivity.this, inputText, Toast.LENGTH_SHORT).show();
+
 
                 if( inputText.length() == 0){
                     //Toast.makeText(SearchActivity.this, "Please enter the things you want to search", Toast.LENGTH_SHORT).show();
